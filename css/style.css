@@ -1,0 +1,46 @@
+
+
+html, html a {
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+
+}
+
+html, body {
+	height: 100%;
+}
+
+body {
+	line-height: 1.5;
+}
+
+header {
+	width: 100%;
+	background-color: #fefefe;
+}
+
+.container {
+	width: 1000px; max-width: 100%;
+	margin: 0 auto;
+	position: relative;
+}
+
+header h2 {
+	position: absolute;
+	width: 500px; max-width: 100%;
+	left: 0; top: 40%;
+	padding: 0 10px;
+	font-family: "futura";
+	font-size: 60px;
+}
+
+header .hero {
+	width: 100%;
+	text-align: right;
+}
+
+
+section {
+	height: 100%; width: 100%;
+}
+
