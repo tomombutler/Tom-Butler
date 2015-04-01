@@ -1,73 +1,61 @@
 // Scroll JS
 
-var $scrolltoabout = $("#scrolltoabout");
+// var $scrolltoabout = $("#scrolltoabout");
 
-var $scrolltocontact = $("#scrolltocontact");
+// var $scrolltocontact = $("#scrolltocontact");
 
-var $scrolltohome = $("#scrolltohome");
+// var $scrolltohome = $("#scrolltohome");
 
-var scrollSpeed = 800; // milliseconds
+// var scrollSpeed = 800; // milliseconds
 
-var headerHeight = 75;
+// var headerHeight = 75;
 
 
-$(".scrollabout").on("click", function ( ev ) {
+// $(".scrollabout").on("click", function ( ev ) {
 
-	ev.preventDefault();
+// 	ev.preventDefault();
 
-	$(document.body).animate({
-		scrollTop: ($scrolltoabout.position().top - headerHeight) + 'px'
-	}, scrollSpeed);
-});
+// 	$(document.body).animate({
+// 		scrollTop: ($scrolltoabout.position().top - headerHeight) + 'px'
+// 	}, scrollSpeed);
+// });
 
-$(".scrollcontact").on("click", function ( ev ) {
+// $(".scrollcontact").on("click", function ( ev ) {
 
-	ev.preventDefault();
+// 	ev.preventDefault();
 
-	$(document.body).animate({
-		scrollTop: ($scrolltocontact.position().top - headerHeight) + 'px'
-	}, scrollSpeed);
-});
+// 	$(document.body).animate({
+// 		scrollTop: ($scrolltocontact.position().top - headerHeight) + 'px'
+// 	}, scrollSpeed);
+// });
 
-$(".scrollhome").on("click", function ( ev ) {
+// $(".scrollhome").on("click", function ( ev ) {
 
-	ev.preventDefault();
+// 	ev.preventDefault();
 
-	$(document.body).animate({
-		scrollTop: $scrolltohome.position().top + 'px'
-	}, scrollSpeed);
-});
+// 	$(document.body).animate({
+// 		scrollTop: $scrolltohome.position().top + 'px'
+// 	}, scrollSpeed);
+// });
 
 // Nav appear
 
 $(".menu").on("click", function ( ev ) {
 
-	$("nav.mobile").fadeToggle(50);
+	$("nav").fadeToggle(50);
 });
 
 
-// about pages appear
+// parallax? 
 
-$(".scrolladmin").on("click", function ( ev ) {
-
-	$("#scrolltoadmin").slideToggle();
-	$("#scrolltomarketing").slideUp();
-	$("#scrolltodata").slideUp();
+$(window).scroll(function() {
+  parallax();
 });
 
-$(".scrollmarketing").on("click", function ( ev ) {
-
-	$("#scrolltomarketing").slideToggle();
-	$("#scrolltoadmin").slideUp();
-	$("#scrolltodata").slideUp();
-});
-
-$(".scrolldata").on("click", function ( ev ) {
-
-	$("#scrolltodata").slideToggle();
-	$("#scrolltoadmin").slideUp();
-	$("#scrolltomarketing").slideUp();
-});
+function parallax() {
+  var scrolled = $(window).scrollTop();
+  $('.intro h2').css('top', -(scrolled * 0.3) + 'px');
+}
 
 
 

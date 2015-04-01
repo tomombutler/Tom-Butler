@@ -3,6 +3,11 @@
     src: url(../fonts/Adso-Bd.otf);
 }
 
+@font-face {
+    font-family: "ahamono";
+    src: url(../fonts/AHAMONO-Monospaced.ttf);
+}
+
 html, html a {
 	-webkit-font-smoothing: antialiased;
 	text-rendering: optimizeLegibility;
@@ -15,13 +20,46 @@ html, body {
 
 body {
 	line-height: 1.5;
-	background-color: #fdfdfd;
+	background-color: #282828;
+	font-family: "ahamono";
+	font-size: 16px;
+	color: #fff;
 }
 
 header {
 	position: fixed;
-	left: 0; top: 0;
-	width: 70px; height: 100%;
+	left: -100px; bottom: 100px;
+
+}
+
+header h1 {
+	width: 100%;
+	font-family: "adso";
+	font-size: 25px;
+	color: #fff;
+	letter-spacing: 10px;
+	text-transform: uppercase;
+	text-decoration: none;
+	transform: rotate(-90deg); 
+}
+
+header span {
+	font-family: "helvetica neue", helvetica, arial, sans-serif;
+	font-size: 25px;
+	color: #ff008f;
+}
+
+header a {
+	font-family: "ahamono", "courier new", courier, monospace;
+	font-size: 16px;
+	color: #fff;
+	text-decoration: none;
+	letter-spacing: 2px;
+	text-transform: none;
+}
+
+section {
+	padding: 0 0 0 50px;
 }
 
 .container {
@@ -37,10 +75,12 @@ header {
 .intro h2 {
 	position: absolute;
 	width: 500px; max-width: 100%;
-	left: 0; top: 30%;
+	left: 0;
+	padding: 20% 0 0 0;
 	font-family: "adso";
 	font-size: 70px;
-	color: #282828;
+	color: #fff;
+	z-index: 20;
 
 	transition: font-size .4s, padding .4s;
 }
@@ -52,9 +92,13 @@ header {
 	text-align: right;
 }
 
+.s {
+	height: 100%; width: 100%;
+}
+
 @media screen and (max-width: 1100px) {
 	.intro h2 {
-		padding: 0 5%;
+		padding: 20% 5%;
 		font-size: 60px;
 	}
 }
