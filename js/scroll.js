@@ -53,7 +53,7 @@ $(".close-section").on("click", function(){
 });
 
 
-// parallax? 
+// parallax 
 
 $(window).scroll(function() {
   parallax();
@@ -61,20 +61,20 @@ $(window).scroll(function() {
 
 function parallax() {
   var scrolled = $(window).scrollTop();
-  $('.intro h2').css('top', -(scrolled * 0.3) + 'px');
+  $('.intro h2').css('top', -(scrolled * 0.1) + 'px');
+}
+
+$(window).scroll(function() {
+  parallax();
+});
+
+function parallax() {
+  var scrolled = $(window).scrollTop();
+  $('article h3').css('top', -(scrolled * 0.1) + 'px');
 }
 
 
-// img fade on load
-
-$(document).ready(function() {  
-    // fade in each image individually as it's downloaded  
-    $('img').load(function() {  
-        $(this).fadeIn('slow');  
-    });  
-});  
-
-// project fade on load
+// project fade on scroll
 
 $(document).ready(function() {
     

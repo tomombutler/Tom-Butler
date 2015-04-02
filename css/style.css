@@ -18,17 +18,19 @@ html, body {
 	height: 100%;
 }
 
-img {
-	display: none;
-}
 
 body {
 	line-height: 1.5;
-	background-color: #282828;
+/*	background-color: #282828;*/
 	font-family: "ahamono";
 	font-size: 16px;
 	color: #fff;
 	letter-spacing: 2px;
+}
+
+article, section {
+	background-color: #282828;
+	z-index: 100;
 }
 
 h2 {
@@ -43,7 +45,7 @@ h2 {
 header {
 	position: fixed;
 	top: 50%; left: -100px; 
-	z-index: 100;
+	z-index: 150;
 }
 
 header h1 {
@@ -73,7 +75,7 @@ nav .menu {
 	top: 50%; right: 20px;
 	transform: translate(0, -50%);
 	transform: rotate(90deg);
-	z-index: 100;
+	z-index: 150;
 }
 
 nav a {
@@ -100,12 +102,20 @@ nav.nav-expand {
 }
 
 .nav-wrap {
-	width: 100%;
-	text-align: center;
-	padding: 10% 20px 10% 20px;
+	position: absolute;
+	display: inline-block;
+	text-align: left;
+	top: 10%; left: 50%;
+	padding: 0 20px;
+	transform: translate(-50%, 0);
 }
 
-nav.nav-expand h3 {
+.nav-wrap p {
+	margin: 30px 0 0 0;
+	line-height: 2.25;
+}
+
+h3 {
 	font-family: "adso";
 	text-align: center;
 	font-size: 50px;
@@ -113,8 +123,24 @@ nav.nav-expand h3 {
 	text-transform: uppercase;
 }
 
-section {
-	padding: 0 100px;
+article h3 {
+	position: absolute;
+	font-size: 150px;
+	letter-spacing: 20px;
+
+	transition: font-size .4s;
+}
+
+article {
+	position: relative;
+	padding: 40px 100px;
+	z-index: 20;
+	margin: 0 0 500px 0;
+}
+
+article .container {
+	border-top: 20px solid #ff008f;
+	padding: 40px 0 0 0;
 }
 
 .container {
@@ -123,7 +149,12 @@ section {
 	margin: 0 auto;
 }
 
+section.intro {
+	padding: 0 100px;
+}
+
 .intro {
+	position: relative;
 	width: 100%;
 }
 
@@ -167,10 +198,101 @@ section {
 	float: right;
 }
 
+footer {
+	position: fixed;
+	text-align: center;
+	bottom: 0;
+	width: 100%; height: 500px;
+	background-color: #ff008f;
+	z-index: 1;
+}
+
+section.photo {
+	width: 100%; height: 100%;
+	background-attachment: fixed;
+	background-position: center center;
+	background-size: 75%;
+	background-repeat: no-repeat;
+	position: relative;
+}
+
+section.start h3 {
+	font-size: 150px;
+	position: absolute;
+	top: 50%; left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.start {
+	background-color: rgba(255,0,143,.95);
+}
+
+.underground {
+	background-image: url(../images/photography/underground.jpg);
+}
+
+.chalet {
+	background-image: url(../images/photography/chalet.jpg);
+}
+
+.prayer {
+	background-image: url(../images/photography/prayer.jpg);
+}
+
+.hill {
+	background-image: url(../images/photography/hill.jpg);
+}
+
+.croatia {
+	background-image: url(../images/photography/croatia.jpg);
+}
+
+.henry {
+	background-image: url(../images/photography/henry.jpg);
+}
+
+.apc {
+	background-image: url(../images/photography/apc.jpg);
+}
+
+.train {
+	background-image: url(../images/photography/train.jpg);
+}
+
+.ldn {
+	background-image: url(../images/photography/ldn.jpg);
+}
+
+.photo.contact {
+	text-align: center;
+	position: relative;
+	padding: 0 100px;
+}
+
+.contact-wrap {
+	width: 100%;
+	position: absolute;
+	top: 50%; left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.contact-wrap a {
+	display: block;
+}
+
 @media screen and (max-width: 1100px) {
+
+	h2 {
+		font-size: 70px;
+	}
+
 	.intro h2 {
 		font-size: 60px;
 	}
+
+	article h3 {
+	font-size: 100px;
+	letter-spacing: 10px;
 }
 
 
