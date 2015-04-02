@@ -18,18 +18,32 @@ html, body {
 	height: 100%;
 }
 
+img {
+	display: none;
+}
+
 body {
 	line-height: 1.5;
 	background-color: #282828;
 	font-family: "ahamono";
 	font-size: 16px;
 	color: #fff;
+	letter-spacing: 2px;
+}
+
+h2 {
+	font-family: "adso";
+	font-size: 70px;
+	color: #fff;
+	z-index: 20;
+
+	transition: font-size .4s, padding .4s;
 }
 
 header {
 	position: fixed;
-	left: -100px; bottom: 100px;
-
+	top: 50%; left: -100px; 
+	z-index: 100;
 }
 
 header h1 {
@@ -40,6 +54,7 @@ header h1 {
 	letter-spacing: 10px;
 	text-transform: uppercase;
 	text-decoration: none;
+	transform: translate(0, -50%);
 	transform: rotate(-90deg); 
 }
 
@@ -50,16 +65,56 @@ header span {
 }
 
 header a {
-	font-family: "ahamono", "courier new", courier, monospace;
-	font-size: 16px;
+	text-decoration: none;
+}
+
+nav .menu {
+	position: fixed;
+	top: 50%; right: 20px;
+	transform: translate(0, -50%);
+	transform: rotate(90deg);
+	z-index: 100;
+}
+
+nav a {
 	color: #fff;
 	text-decoration: none;
-	letter-spacing: 2px;
-	text-transform: none;
+	padding: 10px 0;
+	border-bottom: 1px solid #fff; 
+}
+
+nav.nav-expand {
+	display: none;
+	height: 100%; width: 100%;
+	background-color: rgba(255,0,143,.95);
+	overflow: scroll;
+	position: fixed;
+	z-index: 1000;
+}
+
+.nav-expand .close-section {
+	position: fixed;
+	top: 10px; right: 15px;
+	font-size: 30px;
+	cursor: pointer;
+}
+
+.nav-wrap {
+	width: 100%;
+	text-align: center;
+	padding: 10% 20px 10% 20px;
+}
+
+nav.nav-expand h3 {
+	font-family: "adso";
+	text-align: center;
+	font-size: 50px;
+	letter-spacing: 10px;
+	text-transform: uppercase;
 }
 
 section {
-	padding: 0 0 0 50px;
+	padding: 0 100px;
 }
 
 .container {
@@ -77,36 +132,57 @@ section {
 	width: 500px; max-width: 100%;
 	left: 0;
 	padding: 20% 0 0 0;
-	font-family: "adso";
-	font-size: 70px;
-	color: #fff;
-	z-index: 20;
-
-	transition: font-size .4s, padding .4s;
 }
 
 .intro .hero {
 	max-width: 100%;
 	margin: 0 0 0 20%;
-	padding: 10% 0 40px 0;
+	padding: 5% 0;
 	text-align: right;
 }
 
-.s {
-	height: 100%; width: 100%;
+.project {
+	margin: 50px 0;
+	opacity:0;
+}
+
+.project h2 {
+	width: 100%;
+	color: #ff008f;
+	text-align: right;
+}
+
+.project.project-right h2 {
+	text-align: left;
+}
+
+.column {
+	float: left;
+	width: 50%;
+	overflow: scroll;
+	padding: 20px;
+}
+
+.column.alternative {
+	float: right;
 }
 
 @media screen and (max-width: 1100px) {
 	.intro h2 {
-		padding: 20% 5%;
 		font-size: 60px;
 	}
 }
 
 
 @media screen and (max-width: 600px) {
+
+	.intro {
+		padding: 0 0 0 100px;
+	}
+
 	.intro h2 {
 		font-size: 45px;
+		padding: 0 100px 0 0;
 	}
 }
 
