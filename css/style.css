@@ -18,22 +18,15 @@ html, body {
 	height: 100%;
 }
 
-<<<<<<< HEAD
 body {
+	background-color: #fefefe;
 	line-height: 1.5;
-=======
-
-body {
-	line-height: 1.5;
-/*	background-color: #282828;*/
->>>>>>> origin/master
 	font-family: "ahamono";
 	font-size: 16px;
 	color: #181818;
 	letter-spacing: 2px;
 }
 
-<<<<<<< HEAD
 header h1 {
 	font-family: "apercu";
 	font-weight: 700;
@@ -50,76 +43,52 @@ header h1 {
 
 header h1:hover {
 	color: #11ecc0;
-=======
-article, section {
-	background-color: #282828;
-	z-index: 100;
-}
-
-h2 {
-	font-family: "adso";
-	font-size: 70px;
-	color: #fff;
-	z-index: 20;
-
-	transition: font-size .4s, padding .4s;
 }
 
 header {
 	position: fixed;
 	top: 50%; left: -100px; 
 	z-index: 150;
->>>>>>> origin/master
 }
 
 h2 {
 	font-family: "apercu";
 	font-weight: 700;
 	line-height: 2;
-	color: #11ecc0;
+	color: #fefefe;
 	font-size: 30px;
 	letter-spacing: 10px;
 	text-transform: uppercase;
 }
 
 h2 a {
-	font-family: "apercu";
 	color: #11ecc0;
 	text-decoration: none;
+	padding: 0 0 10px 0;
 	border-bottom: 5px solid #11ecc0;
-	padding-bottom: 10px;
+}
+
+h2 span {
+	color: #11ecc0;
 }
 
 nav, .close {
 	position: fixed;
 	top: 50%; right: 25px;
 	transform: translate(0, -50%);
-<<<<<<< HEAD
 	cursor: pointer;
 	z-index: 20;
-=======
-	transform: rotate(90deg);
-	z-index: 150;
 }
 
-nav a {
-	color: #fff;
-	text-decoration: none;
-	padding: 10px 0;
-	border-bottom: 1px solid #fff; 
->>>>>>> origin/master
-}
-
-.nav-overlay {
+.menu {
 	display: none;
 	position: fixed;
 	width: 100%; height: 100%;
-	background-color: rgba(17,236,192,.95);
+	background-color: rgba(17,236,192,.98);
 	z-index: 100;
 }
 
-<<<<<<< HEAD
-.nav-overlay ul {
+.menu ul {
 	text-align: center;
 	position: absolute;
 	max-width: 100%;
@@ -127,78 +96,41 @@ nav a {
 	transform: translate(-50%,-50%);
 }
 
-.nav-overlay ul a {
+.menu ul a {
 	font-family: "apercu";
 	font-weight: 700;
-	color: #fefefe;
-	font-size: 30px;
-=======
-.nav-wrap {
-	position: absolute;
-	display: inline-block;
-	text-align: left;
-	top: 10%; left: 50%;
-	padding: 0 20px;
-	transform: translate(-50%, 0);
-}
-
-.nav-wrap p {
-	margin: 30px 0 0 0;
-	line-height: 2.25;
-}
-
-h3 {
-	font-family: "adso";
-	text-align: center;
-	font-size: 50px;
->>>>>>> origin/master
-	letter-spacing: 10px;
 	text-transform: uppercase;
 	text-decoration: none;
+	letter-spacing: 10px;
+	color: #fefefe;
+	font-size: 30px;
 	margin: 0 0 0 -10px;
 	padding: 10px 5px 10px 15px;
 	border: 1px solid rgba(0,0,0,0);
 
-<<<<<<< HEAD
 	transition: border-color .3s; 
-=======
-article h3 {
-	position: absolute;
-	font-size: 150px;
-	letter-spacing: 20px;
+}
 
-	transition: font-size .4s;
+.menu li {
+	padding: 15px 0;
+}
+
+.menu ul a:hover {
+	border-color: #fefefe; 
 }
 
 article {
 	position: relative;
 	padding: 40px 100px;
-	z-index: 20;
+	z-index: 10;
 	margin: 0 0 500px 0;
 }
 
-article .container {
-	border-top: 20px solid #ff008f;
-	padding: 40px 0 0 0;
->>>>>>> origin/master
-}
-
-.nav-overlay li {
-	padding: 15px 0;
-}
-
-<<<<<<< HEAD
-.nav-overlay ul a:hover {
-	border-color: #fefefe; 
-=======
-section.intro {
-	padding: 0 100px;
-}
-
 .intro {
+	background-color: #181818;
 	position: relative;
 	width: 100%;
->>>>>>> origin/master
+	height: 100%;
 }
 
 section.intro, .projects {
@@ -226,7 +158,8 @@ section.intro, .projects {
 
 .projects {
 	background-color: #fefefe;
-	padding: 20px 60px;
+	padding: 10px 60px;	
+	z-index: 10;
 }
 
 .container {
@@ -235,109 +168,12 @@ section.intro, .projects {
 	margin: 0 auto;
 }
 
-<<<<<<< HEAD
 h3 {
 	display: inline-block;
 	padding: 0 0 5px;
 	border-bottom: 1px solid #181818;	
-=======
-footer {
-	position: fixed;
-	text-align: center;
-	bottom: 0;
-	width: 100%; height: 500px;
-	background-color: #ff008f;
-	z-index: 1;
 }
 
-section.photo {
-	width: 100%; height: 100%;
-	background-attachment: fixed;
-	background-position: center center;
-	background-size: 75%;
-	background-repeat: no-repeat;
-	position: relative;
-}
-
-section.start h3 {
-	font-size: 150px;
-	position: absolute;
-	top: 50%; left: 50%;
-	transform: translate(-50%, -50%);
-}
-
-.start {
-	background-color: rgba(255,0,143,.95);
-}
-
-.underground {
-	background-image: url(../images/photography/underground.jpg);
-}
-
-.chalet {
-	background-image: url(../images/photography/chalet.jpg);
-}
-
-.prayer {
-	background-image: url(../images/photography/prayer.jpg);
-}
-
-.hill {
-	background-image: url(../images/photography/hill.jpg);
-}
-
-.croatia {
-	background-image: url(../images/photography/croatia.jpg);
-}
-
-.henry {
-	background-image: url(../images/photography/henry.jpg);
-}
-
-.apc {
-	background-image: url(../images/photography/apc.jpg);
-}
-
-.train {
-	background-image: url(../images/photography/train.jpg);
-}
-
-.ldn {
-	background-image: url(../images/photography/ldn.jpg);
-}
-
-.photo.contact {
-	text-align: center;
-	position: relative;
-	padding: 0 100px;
-}
-
-.contact-wrap {
-	width: 100%;
-	position: absolute;
-	top: 50%; left: 50%;
-	transform: translate(-50%, -50%);
-}
-
-.contact-wrap a {
-	display: block;
-}
-
-@media screen and (max-width: 1100px) {
-
-	h2 {
-		font-size: 70px;
-	}
-
-	.intro h2 {
-		font-size: 60px;
-	}
-
-	article h3 {
-	font-size: 100px;
-	letter-spacing: 10px;
->>>>>>> origin/master
-}
 .s {
-	height: 1000px; width: 100%;
+	height: 2000px; width: 100%;
 }
