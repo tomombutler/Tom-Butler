@@ -18,172 +18,136 @@ html, body {
 	height: 100%;
 }
 
-img {
-	display: none;
-}
-
 body {
 	line-height: 1.5;
-	background-color: #282828;
 	font-family: "ahamono";
 	font-size: 16px;
-	color: #fff;
+	color: #181818;
 	letter-spacing: 2px;
 }
 
-h2 {
-	font-family: "adso";
-	font-size: 70px;
-	color: #fff;
-	z-index: 20;
-
-	transition: font-size .4s, padding .4s;
-}
-
-header {
-	position: fixed;
-	top: 50%; left: -100px; 
-	z-index: 100;
-}
-
 header h1 {
-	width: 100%;
-	font-family: "adso";
-	font-size: 25px;
-	color: #fff;
+	font-family: "apercu";
+	font-weight: 700;
+	color: #181818;
+	font-size: 15px;
+	letter-spacing: 10px;
+	text-transform: uppercase; 
+	position: fixed;
+	top: 50%; left: -75px;
+	transform-origin: 50% 0%;
+	transform: rotate(-90deg);
+	z-index: 200;
+}
+
+header h1:hover {
+	color: #11ecc0;
+}
+
+h2 {
+	font-family: "apercu";
+	font-weight: 700;
+	line-height: 2;
+	color: #11ecc0;
+	font-size: 30px;
 	letter-spacing: 10px;
 	text-transform: uppercase;
+}
+
+h2 a {
+	font-family: "apercu";
+	color: #11ecc0;
 	text-decoration: none;
-	transform: translate(0, -50%);
-	transform: rotate(-90deg); 
+	border-bottom: 5px solid #11ecc0;
+	padding-bottom: 10px;
 }
 
-header span {
-	font-family: "helvetica neue", helvetica, arial, sans-serif;
-	font-size: 25px;
-	color: #ff008f;
-}
-
-header a {
-	text-decoration: none;
-}
-
-nav .menu {
+nav, .close {
 	position: fixed;
-	top: 50%; right: 20px;
+	top: 50%; right: 25px;
 	transform: translate(0, -50%);
-	transform: rotate(90deg);
+	cursor: pointer;
+	z-index: 20;
+}
+
+.nav-overlay {
+	display: none;
+	position: fixed;
+	width: 100%; height: 100%;
+	background-color: rgba(17,236,192,.95);
 	z-index: 100;
 }
 
-nav a {
-	color: #fff;
-	text-decoration: none;
-	padding: 10px 0;
-	border-bottom: 1px solid #fff; 
+.nav-overlay ul {
+	text-align: center;
+	position: absolute;
+	max-width: 100%;
+	top: 50%; left: 50%;
+	transform: translate(-50%,-50%);
 }
 
-nav.nav-expand {
-	display: none;
-	height: 100%; width: 100%;
-	background-color: rgba(255,0,143,.95);
-	overflow: scroll;
-	position: fixed;
-	z-index: 1000;
-}
-
-.nav-expand .close-section {
-	position: fixed;
-	top: 10px; right: 15px;
+.nav-overlay ul a {
+	font-family: "apercu";
+	font-weight: 700;
+	color: #fefefe;
 	font-size: 30px;
-	cursor: pointer;
-}
-
-.nav-wrap {
-	width: 100%;
-	text-align: center;
-	padding: 10% 20px 10% 20px;
-}
-
-nav.nav-expand h3 {
-	font-family: "adso";
-	text-align: center;
-	font-size: 50px;
 	letter-spacing: 10px;
 	text-transform: uppercase;
+	text-decoration: none;
+	margin: 0 0 0 -10px;
+	padding: 10px 5px 10px 15px;
+	border: 1px solid rgba(0,0,0,0);
+
+	transition: border-color .3s; 
 }
 
-section {
-	padding: 0 100px;
+.nav-overlay li {
+	padding: 15px 0;
+}
+
+.nav-overlay ul a:hover {
+	border-color: #fefefe; 
+}
+
+section.intro, .projects {
+	position: relative;
+	height: 100%; width: 100%;
+}
+
+.intro-text {
+	position: absolute;
+	max-width: 100%;
+	top: 50%; left: 50%;
+	margin: 0 0 0 10px;
+	transform: translate(-50%,-50%);
+	z-index: 20;
+}
+
+.hero {
+	position: fixed;
+	width: 50%; height: 100%;
+	top: 0; right: 0;
+	background-image: url(../images/tb-bw-main.jpg);
+	background-position: left center; 
+	background-size: cover;
+}
+
+.projects {
+	background-color: #fefefe;
+	padding: 20px 60px;
 }
 
 .container {
-	position: relative;
+	text-align: center;
 	width: 1000px; max-width: 100%;
 	margin: 0 auto;
 }
 
-.intro {
-	width: 100%;
+h3 {
+	display: inline-block;
+	padding: 0 0 5px;
+	border-bottom: 1px solid #181818;	
 }
-
-.intro h2 {
-	position: absolute;
-	width: 500px; max-width: 100%;
-	left: 0;
-	padding: 20% 0 0 0;
+.s {
+	height: 1000px; width: 100%;
 }
-
-.intro .hero {
-	max-width: 100%;
-	margin: 0 0 0 20%;
-	padding: 5% 0;
-	text-align: right;
-}
-
-.project {
-	margin: 50px 0;
-	opacity:0;
-}
-
-.project h2 {
-	width: 100%;
-	color: #ff008f;
-	text-align: right;
-}
-
-.project.project-right h2 {
-	text-align: left;
-}
-
-.column {
-	float: left;
-	width: 50%;
-	overflow: scroll;
-	padding: 20px;
-}
-
-.column.alternative {
-	float: right;
-}
-
-@media screen and (max-width: 1100px) {
-	.intro h2 {
-		font-size: 60px;
-	}
-}
-
-
-@media screen and (max-width: 600px) {
-
-	.intro {
-		padding: 0 0 0 100px;
-	}
-
-	.intro h2 {
-		font-size: 45px;
-		padding: 0 100px 0 0;
-	}
-}
-
-
