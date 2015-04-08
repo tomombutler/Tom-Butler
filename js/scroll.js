@@ -58,11 +58,16 @@ $(".close").on("click", function(){
 
 //  sticky
 
+<<<<<<< HEAD
 // Create a clone of the menu, right next to original.
 $('.project-header').addClass('original').clone().insertAfter('.project-header').addClass('cloned').css('position','fixed').css('top','0').css('margin-top','0').css('z-index','500').removeClass('original').hide();
+=======
+// parallax 
+>>>>>>> origin/master
 
 scrollIntervalID = setInterval(stickIt, 10);
 
+<<<<<<< HEAD
 
 function stickIt() {
 
@@ -85,6 +90,48 @@ function stickIt() {
     $('.original').css('visibility','visible');
   }
 }
+=======
+function parallax() {
+  var scrolled = $(window).scrollTop();
+  $('.intro h2').css('top', -(scrolled * 0.1) + 'px');
+}
+
+$(window).scroll(function() {
+  parallax();
+});
+
+function parallax() {
+  var scrolled = $(window).scrollTop();
+  $('article h3').css('top', -(scrolled * 0.1) + 'px');
+}
+
+
+// project fade on scroll
+
+$(document).ready(function() {
+    
+    /* Every time the window is scrolled ... */
+    $(window).scroll( function(){
+    
+        /* Check the location of each desired element */
+        $('.project').each( function(i){
+            
+            var bottom_of_object = $(this).offset().top - 250 + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            
+            /* If the object is completely visible in the window, fade it it */
+            if( bottom_of_window > bottom_of_object ){
+                
+                $(this).animate({'opacity':'1'},400);
+                    
+            }
+            
+        }); 
+    
+    });
+    
+});
+>>>>>>> origin/master
 
 
 
