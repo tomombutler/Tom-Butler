@@ -59,7 +59,7 @@ h2 {
 	font-family: "apercu";
 	font-weight: 700;
 	line-height: 2;
-	color: #fefefe;
+	color: #11ecc0;
 	font-size: 30px;
 	letter-spacing: 10px;
 	text-transform: uppercase;
@@ -87,8 +87,11 @@ nav, .close {
 .menu {
 	display: none;
 	position: fixed;
+	top: 0; right: 0;
+	max-width: 500px;
 	width: 100%; height: 100%;
-	background-color: rgba(17,236,192,.98);
+	/*background-color: rgba(17,236,192,.9);*/
+	background-color: rgba(24,24,24,.9);
 	z-index: 1000;
 }
 
@@ -101,6 +104,7 @@ nav, .close {
 }
 
 .menu ul a {
+	display: none;
 	font-family: "apercu";
 	font-weight: 700;
 	text-transform: uppercase;
@@ -124,7 +128,6 @@ nav, .close {
 }
 
 .intro {
-	background-color: #181818;
 	position: relative;
 	width: 100%;
 	height: 100%;
@@ -155,6 +158,12 @@ section.intro, .projects {
 	z-index: -100;
 }
 
+.divide {
+	width: 100%; height: 30px;
+	margin: 0 auto;
+	background-color: #11ecc0;
+}
+
 article {
 	position: relative;
 	padding: 40px 100px;
@@ -172,10 +181,16 @@ article {
 	margin: 0 auto;
 }
 
+.project-header {
+	text-align: center;
+	width: 100%;
+	padding: 10px 0 0 0;
+	border-top: 10px solid #11ecc0;
+}
+
 h3 {
 	display: inline-block;
 	padding: 0 0 5px;
-	margin-top: 10px;
 	border-bottom: 1px solid #181818;	
 }
 

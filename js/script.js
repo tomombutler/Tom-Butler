@@ -2,18 +2,19 @@
 
 $("nav").on("click", function ( ev ) {
 
-	$(".menu").fadeIn(300);
-  $("nav").fadeOut(300);
-  // $("header h1").css("color", "#fefefe");
-});
+	$(".menu").animate({width:'toggle'}, 700, 'easeInOutCirc');
+  $(".menu ul a").fadeIn(700, 'easeInOutCirc');
+  $(".close").fadeIn(350);
+  $("nav").fadeOut(1);
 
-// Nav close
+});
 
 $(".close").on("click", function(){
 
-	$(".menu").fadeOut(300);
-  $("nav").fadeIn(300);
-  // $("header h1").css("color", "#181818");
+	$(".menu").animate({width:'toggle'}, 700, 'easeInOutCirc');
+  $(".menu ul a").fadeOut(700, 'easeInOutCirc');
+  $(".close").fadeOut(1);
+  $("nav").fadeIn(350);
 });
 
 //  sticky
