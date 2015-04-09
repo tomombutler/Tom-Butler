@@ -44,6 +44,13 @@ header h1, .menu a h1 {
 	color: #fefefe;
 }
 
+.circle {
+	height: 5px; width: 5px;
+	background-color: #fefefe;
+	border-radius: 50%;
+	margin: 10px auto;
+}
+
 header h1:hover {
 	color: #11ecc0;
 }
