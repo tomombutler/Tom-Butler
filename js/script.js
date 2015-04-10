@@ -2,21 +2,21 @@
 
 $("nav").on("click", function ( ev ) {
 
-	$(".menu").animate({width:'toggle'}, 700, 'easeInOutCirc');
-  $(".menu ul a").fadeIn(700, 'easeInOutCirc');
-  $(".close").fadeIn(700, 'easeInOutCirc');
-  $(".circle").fadeIn(700, 'easeInOutCirc');
+	$(".menu").animate({width:'toggle'}, 500, 'easeInOutCirc');
+  $(".menu ul a").fadeIn(500, 'easeInOutCirc');
+  $(".close").fadeIn(500, 'easeInOutCirc');
+  $(".circle").fadeIn(500, 'easeInOutCirc');
   $("nav").fadeOut(1);
 
 });
 
 $(".close").on("click", function(){
 
-	$(".menu").animate({width:'toggle'}, 700, 'easeInOutCirc');
-  $(".menu ul a").fadeOut(700, 'easeInOutCirc');
+	$(".menu").animate({width:'toggle'}, 500, 'easeInOutCirc');
+  $(".menu ul a").fadeOut(500, 'easeInOutCirc');
   $(".close").fadeOut(1);
-  $(".circle").fadeOut(700, 'easeInOutCirc');
-  $("nav").fadeIn(700, 'easeInOutCirc');
+  $(".circle").fadeOut(500, 'easeInOutCirc');
+  $("nav").fadeIn(500, 'easeInOutCirc');
 });
 
 //  sticky
