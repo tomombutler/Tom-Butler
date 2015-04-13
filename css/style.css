@@ -188,7 +188,6 @@ article {
 	max-width: 1000px;
 	width: 100%;
 	margin: 0 auto;
-	background-color: #fefefe;
 }
 
 .project-header {
@@ -298,4 +297,12 @@ ul.gallery {
 
 .gallery li img {
 	width: 100%;
+}
+
+section.description {
+	margin: 20px 0 0 0;
+}
+
+section.description .container {
+	text-align: left;
 }
