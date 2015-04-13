@@ -1,7 +1,7 @@
-@font-face {
-    font-family: "adso";
+/*@font-face {
+    font-family: "apercu";
     src: url(../fonts/Adso-Bd.otf);
-}
+}*/
 
 @font-face {
     font-family: "ahamono";
@@ -185,13 +185,16 @@ article {
 }
 
 .project-header-wrap {
+	max-width: 1000px;
+	width: 100%;
+	margin: 0 auto;
 	background-color: #fefefe;
 }
 
 .project-header {
 	text-align: center;
 	width: 100%;
-	padding: 10px 0 0 0;
+	padding: 10px 60px;
 	border-top: 10px solid #11ecc0;
 }
 
