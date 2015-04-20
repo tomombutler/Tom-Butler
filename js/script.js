@@ -2,27 +2,29 @@
 
 $("nav").on("click", function ( ev ) {
 
-	$(".menu").animate({width:'toggle'}, 500, 'easeInOutCirc');
-  $(".menu ul a").fadeIn(500, 'easeInOutCirc');
-  $(".close").fadeIn(500, 'easeInOutCirc');
-  $(".circle").fadeIn(500, 'easeInOutCirc');
+	$(".menu").animate({width:'toggle'}, 350, 'easeInOutCirc');
+  $(".menu ul a").fadeIn(350, 'easeInOutCirc');
+  $(".close").fadeIn(350, 'easeInOutCirc');
+  $(".circle").fadeIn(350, 'easeInOutCir350c');
+  $(".menu-stripe").fadeIn(350, 'easeInOutCirc');
   $("nav").fadeOut(1);
 
 });
 
 $(".close").on("click", function(){
 
-	$(".menu").animate({width:'toggle'}, 500, 'easeInOutCirc');
-  $(".menu ul a").fadeOut(500, 'easeInOutCirc');
+	$(".menu").animate({width:'toggle'}, 350, 'easeInOutCirc');
+  $(".menu ul a").fadeOut(350, 'easeInOutCirc');
   $(".close").fadeOut(1);
-  $(".circle").fadeOut(500, 'easeInOutCirc');
-  $("nav").fadeIn(500, 'easeInOutCirc');
+  $(".circle").fadeOut(350, 'easeInOutCirc');
+  $(".menu-stripe").fadeOut(350, 'easeInOutCirc');
+  $("nav").fadeIn(350, 'easeInOutCirc');
 });
 
 //  sticky
 
 // Create a clone of the menu, right next to original.
-$('.project-header').addClass('original').clone().insertAfter('.project-header').addClass('cloned').css('position','fixed').css('top','0').css('margin-top','0').css('z-index','500').removeClass('original').hide();
+$('.project-header').addClass('original').clone().insertAfter('.project-header').addClass('cloned').css('position','fixed').css('top','0').css('margin-top','0').css('z-index','350').removeClass('original').hide();
 
 scrollIntervalID = setInterval(stickIt, 10);
 
