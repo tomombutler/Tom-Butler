@@ -47,6 +47,10 @@ header {
 	z-index: 1500;
 
 	transform: rotate(-90deg);
+	-webkit-transform: rotate(-90deg);
+	-moz-transform: rotate(-90deg);
+	-ms-transform: rotate(-90deg);
+	-o-transform: rotate(-90deg);
 }
 
 .header-text a {
@@ -133,9 +137,13 @@ nav, .close {
 .intro-text {
 	position: absolute;
 	top: 50%; left: 50%;
-
-	-webkit-transform: translate(-50%,-50%);
 	z-index: 300;
+
+	transform: translate(-50%,-50%);
+	-webkit-transform: translate(-50%,-50%);
+	-moz-transform: translate(-50%,-50%);
+	-ms-transform: translate(-50%,-50%);
+	-o-transform: translate(-50%,-50%);
 }
 
 .hero {
@@ -234,6 +242,10 @@ h3, .project-header p {
 	top: 50%; left: 50%;
 
 	transform: translate(-50%,-50%);
+	-webkit-transform: translate(-50%,-50%);
+	-moz-transform: translate(-50%,-50%);
+	-ms-transform: translate(-50%,-50%);
+	-o-transform: translate(-50%,-50%);
 }
 
 h4 {
@@ -317,7 +329,10 @@ section.description {
 
 section.description .container {
 	text-align: left;
+}
 
+video {
+	max-width: 100%;
 }
 
 
@@ -339,6 +354,10 @@ section.description .container {
 	position: absolute;
 	top: 50%; left: 50%;
 	transform: translate(-50%,-50%);
+	-webkit-transform: translate(-50%,-50%);
+	-moz-transform: translate(-50%,-50%);
+	-ms-transform: translate(-50%,-50%);
+	-o-transform: translate(-50%,-50%);
 }
 
 
