@@ -1,13 +1,13 @@
 @font-face {
   font-family: 'larsseit-bold';
-  src: url('Larsseit-Bold.woff') format('woff'),
-       url('Larsseit-Bold.ttf') format('truetype');
+  src: url('../fonts/Larsseit-Bold.woff') format('woff'),
+       url('../fonts/Larsseit-Bold.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'larsseit';
-  src: url('Larsseit.woff') format('woff'),
-       url('Larsseit.ttf') format('truetype');
+  src: url('../fonts/Larsseit.woff') format('woff'),
+       url('../fonts/Larsseit.ttf') format('truetype');
 }
 
 @font-face {
@@ -45,7 +45,7 @@ header {
 .header-text h1 {
 	position: fixed;
 	font-family: "larsseit-bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
-	font-weight: 700;
+	
 	color: #fefefe;
 	font-size: 15px;
 	letter-spacing: 10px;
@@ -72,7 +72,6 @@ header {
 
 h2 {
 	font-family: "larsseit-bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
-	font-weight: 700;
 	line-height: 2;
 	color: #11ecc0;
 	font-size: 30px;
@@ -261,7 +260,7 @@ h3, .project-header p {
 
 h4 {
 	font-family: "larsseit-bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
-	font-weight: 700;
+	
 	font-size: 30px;
 	color: #181818;
 }
@@ -318,7 +317,6 @@ footer a:hover {
 
 .project-description {
 	font-family: "larsseit-bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
-	font-weight: 700;
 	font-size: 20px;
 }
 
