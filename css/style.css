@@ -1,7 +1,14 @@
-/*@font-face {
-    font-family: "apercu";
-    src: url(../fonts/Adso-Bd.otf);
-}*/
+@font-face {
+  font-family: 'larsseit-bold';
+  src: url('Larsseit-Bold.woff') format('woff'),
+       url('Larsseit-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'larsseit';
+  src: url('Larsseit.woff') format('woff'),
+       url('Larsseit.ttf') format('truetype');
+}
 
 @font-face {
     font-family: "ahamono";
@@ -37,7 +44,7 @@ header {
 
 .header-text h1 {
 	position: fixed;
-	font-family: "apercu";
+	font-family: "larsseit-bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-weight: 700;
 	color: #fefefe;
 	font-size: 15px;
@@ -64,7 +71,7 @@ header {
 }
 
 h2 {
-	font-family: "apercu";
+	font-family: "larsseit-bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-weight: 700;
 	line-height: 2;
 	color: #11ecc0;
@@ -110,9 +117,13 @@ nav, .close {
 	max-width: 100%;
 }
 
+.menu li {
+	padding: 5px 0 0 0;
+}
+
 .menu ul a {
 	display: none;
-	font-family: "apercu";
+	font-family: "larsseit", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	text-decoration: none;
 	color: #fefefe;
 	font-size: 25px;
@@ -249,7 +260,7 @@ h3, .project-header p {
 }
 
 h4 {
-	font-family: "apercu";
+	font-family: "larsseit-bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-weight: 700;
 	font-size: 30px;
 	color: #181818;
@@ -269,7 +280,7 @@ footer {
 }
 
 footer h2, footer a, footer p, .contact h2, .contact a, .contact p{
-	font-family: "apercu";
+	font-family: "larsseit", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 25px;
 	color: #fefefe;
 	text-decoration: none;
@@ -306,7 +317,7 @@ footer a:hover {
 }
 
 .project-description {
-	font-family: "apercu";
+	font-family: "larsseit-bold", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-weight: 700;
 	font-size: 20px;
 }
@@ -335,6 +346,26 @@ video {
 	max-width: 100%;
 }
 
+/* about page styles */
+
+.about .container {
+	text-align: left;
+	width: 800px;
+	padding: 40px 20px 150px;
+}
+
+.about p {
+	font-family: "larsseit", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: #11ecc0;
+	font-size: 30px;
+	letter-spacing: 3px;
+	text-decoration: none;
+}
+
+.about a {
+	color: #11ecc0;
+}
+
 
 /* contact page styles */
 
@@ -359,6 +390,24 @@ video {
 	-ms-transform: translate(-50%,-50%);
 	-o-transform: translate(-50%,-50%);
 }
+
+
+/* responsive */
+
+@media screen and (max-width: 500px) {
+
+	h2 {
+		font-size: 20px;
+	}
+
+	footer h2, footer a, footer p, .contact h2, .contact a, .contact p {
+		font-size: 16px;
+	}
+
+	.about p {
+		font-size: 20px;
+	}
+} 
 
 
 

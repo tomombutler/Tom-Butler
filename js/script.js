@@ -50,3 +50,21 @@ function stickIt() {
     $('.original').css('visibility','visible');
   }
 }
+
+
+// Scroll JS
+
+var $scrolltowork = $("#scrolltowork");
+
+var scrollSpeed = 350; // milliseconds
+
+
+$(".scrollwork").on("click", function ( ev ) {
+
+  ev.preventDefault();
+
+  $(document.body).animate({
+    scrollTop: $scrolltowork.position().top + 'px'
+  }, scrollSpeed);
+});
+
